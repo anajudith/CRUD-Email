@@ -1,0 +1,322 @@
+
+html{
+    font-size: 62.5%;
+}
+.grid-html {
+    display: grid;
+     grid-template-columns: 0.3fr 1fr;
+    /*grid-template-rows: 0.2fr 0.2fr; */
+    grid-template-areas: 
+      'corpo corpo'
+      'container-menu table-grid' ;
+  } 
+
+
+header {
+  grid-area: corpo;
+  font-size: 1.6rem;
+  width: 107%;
+  background-color: #2d3e50;
+  box-shadow: 2px 2px 2px grey;
+  height: 6.8rem;
+  text-align: center;
+  box-shadow: 0 0 1em;
+  position: relative;
+  z-index: 2;
+}
+.headerInfor{
+    background-color: #2d3e50;
+    width: 100%;
+    height: 28rem; 
+}
+body {
+    background-color: #f9f9f9;
+    margin: 0;
+}
+.bodyInfor{
+    margin: 0;
+    padding: 0;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 16px;
+    background-color: #f9f9f9;
+}
+.logo {
+    height: 50px;
+    width: 100px;
+    float: left;
+    margin-top: 10px;
+    padding-left: 20px;
+}
+
+.containerMenu, shadow {
+    grid-area: container-menu;
+    width: 15rem;
+    position: relative;
+    float: left;
+    background-color: white;
+    height: 100vh; 
+    padding: 16px;
+    box-shadow: 0 0 0.3em gray ;
+
+}
+.containerContact {
+    margin: -1rem 5rem;
+
+  }
+
+.containerMenu ul {
+    list-style: none;
+    font-size: 4.2rem;
+    margin: -0.5rem 1rem 0rem -2rem;
+    
+} 
+
+    /* Estilização da tabela  */
+.table {   
+    grid-area: table-grid;
+    /* grid-template-columns: repeat(5, minmax(166px, 1fr));  */
+    display: inline-table;
+    background-color: white; 
+    border: none;
+    width: 90rem;
+    color: grey;
+    font-size: 1.5rem;
+    margin-top: 6rem; 
+    border-collapse: collapse;
+    border-radius: 5px;
+    box-shadow: 0 0 0.3em gray ;
+    overflow-y: auto;
+
+}
+tr:not(:last-child) {
+    border-bottom: 1px solid rgb(185, 159, 159);
+}
+
+
+th, td {
+    border: 0px;
+    margin: 0px;
+    padding: 0px;
+}
+
+td, tr {      
+    height: 4rem;
+    padding: 0.5rem 2.2rem 1rem 0.7rem;
+}
+td:nth-child(6n){
+    
+    justify-content: flex-end;
+    padding: 1rem 0rem 1rem 3rem;
+}
+
+td:first-child {
+    text-align: center;
+}
+
+.search {
+    margin-top: 2rem;
+    width: 71rem;
+    border-radius: 2.0rem;
+    outline: 0;
+    border: 1px solid;
+    height: 3.5rem; 
+} 
+
+.fotos {
+    height: 4.3rem;
+    width: 4.3rem;
+    border-radius: 50%;
+}
+
+.name {
+    font-family:Verdana, Geneva, Tahoma, sans-serif; 
+    font-weight: 500;
+}
+/* tabela icones */
+.iconsTable {
+    background-repeat: no-repeat;
+    justify-content: flex-end;
+    height: 1.5rem;
+    width: 1.5rem;
+    padding: 1.5rem;
+    margin: 0rem 0rem 0rem 2rem;
+    border: none;
+    background-color: white;
+}
+.iconsTable:hover {
+    background-color: #aebe1e; 
+}
+/* ICONES */
+
+.bi {
+    background-image: url("../assets/svg/lupa.svg");
+    background-repeat: no-repeat;
+    padding-left: 35px;
+    background-position: 10px;
+}
+
+.todos {
+    background-image: url("../assets/svg/todos.svg");
+}
+.check2 {
+      background-image: url("../assets/svg/check.svg");}
+.trash {
+    background-image: url("../assets/svg/trash.svg");    
+}
+.circle {
+    background-image: url("../assets/svg/circle.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+    border-radius: 50%;
+    width: 3.5rem;
+    height: 3.5rem;
+    margin: 2rem;
+    border: none;
+    cursor: pointer;
+}
+
+/* ICONES MENU */
+ .menu{
+    background-repeat: no-repeat;
+    padding-left: 4rem;
+    background-position: 0.5rem 0.2rem;
+    margin: 1rem 0rem 0rem -2rem; 
+    font-family:Verdana, Geneva, Tahoma, sans-serif; 
+    font-size: large;
+    border: none;
+    background-color: white;
+} 
+
+
+.iconsInfor, ul {
+   
+    list-style: none;
+}
+.iconsInfor {
+    padding: 2rem;
+    display:flex;
+}
+
+.info-card {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+h1{
+    padding: 1rem;
+}
+
+.todos:hover, .check2:hover, .trash:hover {
+    color: #aebe1e; 
+}
+.pessoa {
+    background-image: url("../assets/svg/pessoa.svg");
+    background-repeat: no-repeat;
+    float: right;
+    background: rgb(255, 255, 255);
+    margin: 2rem 2rem 0rem 0rem ;
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+}
+
+/*CSS INFOR USUARIOS*/
+.bodyInfor{
+    display: none;
+}
+
+
+.card-container {
+    width: 58rem;
+    height: 42rem;
+    background: #fff;
+    border-radius: 6px;
+    box-shadow: 0 1px 5px 1px rgb(0 0 0 / 30%);
+    position: absolute;
+    top: 16rem;
+    left: 38rem;
+    transform: translate(-50px, -50px);
+    z-index: 5;
+}
+.top {
+    height: 108px;
+    border-radius: 0.6rem 0rem ;
+    border: 0.1rem solid #cfc7c7;
+    background: #f2f2f2 ;
+    display: flex;
+    justify-content: center;
+}
+.imagem-containerInfo {
+    /* background-color: #fff;
+    width: 120px;
+    height: 100px; */
+    border-radius: 50%;
+    margin-top: 2.5rem;
+    
+    z-index: 5;
+
+}
+
+.imagem-containerInfo img {
+    background-color: #fff;
+    border: 0.1rem solid #2d3e50;
+    width: 14rem;
+    height: 14rem;
+    border-radius: 50%;
+    padding: 0.2rem;
+}
+.bottom {
+    background-color: #fff;
+    padding: 20px;
+    padding-top: 60px;
+    text-align: center;
+}
+.bottom h4 {
+    font-family: 'Raleway', sans-serif;
+    color: rgb(159, 163, 167);
+}
+
+
+.info-card{
+    display: flex-box;
+    align-items: center;
+    justify-content: center;
+}
+.info-card img{
+    display: flex-box;
+    align-items: center;
+    justify-content: center;    
+    width: 3rem;
+    padding: 0rem 1.5rem 0rem 1.5rem;
+}
+svg:hover path{
+    fill: #aebe1e;
+}
+
+
+        /* DESKTOP */
+@media (min-width: 1880px){      
+    /* body{ background-color: royalblue;}  */
+    header {width: 100%;}
+    .containerMenu{ width: 18rem;}
+    .table{width: 100%;} /* % */
+    .search{ width: 100rem; }
+    .top{height: 10.7rem; }
+    .card-container{ top: 20rem; width: 65rem; left: 65rem; height: 45rem;}
+    .headerInfor{ height: 33rem;}
+}
+
+
+@media (max-width: 768px) {      
+     /* body{ background-color: rgb(155, 231, 14);}  */
+   .menu{  margin: 1rem 0rem 0rem -3rem;}
+   .containerMenu {width: 15rem; }
+}
+
+/*TABLET*/
+@media screen and (min-width: 768) and (max-width: 1024) {
+    
+    .search { height: 1.6rem; width: 27rem; justify-content: center; margin-right: 10rem;} 
+
+}
+
